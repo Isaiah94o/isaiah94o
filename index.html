@@ -15,10 +15,38 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-            color: #fff;
+            background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 50%, #d9d9d9 100%);
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(192, 192, 192, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(192, 192, 192, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(192, 192, 192, 0.08) 0%, transparent 50%),
+                linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 50%, #d9d9d9 100%);
+            background-attachment: fixed;
             position: relative;
             overflow-x: hidden;
+        }
+
+        /* Floral Pattern Overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(200, 200, 200, 0.15) 0%, transparent 15%),
+                radial-gradient(circle at 15% 25%, rgba(200, 200, 200, 0.12) 0%, transparent 12%),
+                radial-gradient(circle at 85% 15%, rgba(200, 200, 200, 0.15) 0%, transparent 15%),
+                radial-gradient(circle at 90% 20%, rgba(200, 200, 200, 0.12) 0%, transparent 12%),
+                radial-gradient(circle at 50% 85%, rgba(200, 200, 200, 0.15) 0%, transparent 15%),
+                radial-gradient(circle at 55% 90%, rgba(200, 200, 200, 0.12) 0%, transparent 12%),
+                radial-gradient(circle at 25% 75%, rgba(200, 200, 200, 0.1) 0%, transparent 18%),
+                radial-gradient(circle at 70% 50%, rgba(200, 200, 200, 0.1) 0%, transparent 18%);
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            pointer-events: none;
+            z-index: -1;
         }
 
         /* Spark Animation */
@@ -44,18 +72,19 @@
             position: absolute;
             width: 3px;
             height: 3px;
-            background: #ffd700;
+            background: #c0c0c0;
             border-radius: 50%;
-            box-shadow: 0 0 10px #ffd700, 0 0 20px rgba(255, 215, 0, 0.5);
+            box-shadow: 0 0 10px #c0c0c0, 0 0 20px rgba(192, 192, 192, 0.5);
         }
 
         header {
-            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+            background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
             padding: 60px 20px;
             text-align: center;
-            border-bottom: 3px solid #000;
+            border-bottom: 3px solid #666;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         header::before {
@@ -65,7 +94,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, transparent 30%, rgba(255, 215, 0, 0.1) 50%, transparent 70%);
+            background: linear-gradient(45deg, transparent 30%, rgba(192, 192, 192, 0.1) 50%, transparent 70%);
             animation: shimmer 3s infinite;
         }
 
@@ -79,15 +108,15 @@
             margin-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #000;
+            color: #333;
             position: relative;
             z-index: 1;
-            text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.3);
+            text-shadow: 1px 1px 2px rgba(192, 192, 192, 0.3);
         }
 
         header p {
             font-size: 1.3em;
-            color: #333;
+            color: #555;
             margin-bottom: 20px;
             position: relative;
             z-index: 1;
@@ -95,7 +124,7 @@
 
         .tagline {
             font-size: 0.9em;
-            color: #666;
+            color: #777;
             font-style: italic;
             position: relative;
             z-index: 1;
@@ -105,6 +134,8 @@
             max-width: 1000px;
             margin: 0 auto;
             padding: 40px 20px;
+            position: relative;
+            z-index: 1;
         }
 
         .stats {
@@ -115,14 +146,15 @@
         }
 
         .stat-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid #fff;
+            background: rgba(255, 255, 255, 0.7);
+            border: 2px solid #c0c0c0;
             padding: 20px;
             border-radius: 8px;
             text-align: center;
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .stat-card::before {
@@ -132,15 +164,15 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.2), transparent);
             transition: left 0.5s;
         }
 
         .stat-card:hover {
             transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-            border-color: #ffd700;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+            border-color: #999;
         }
 
         .stat-card:hover::before {
@@ -150,14 +182,14 @@
         .stat-number {
             font-size: 2.5em;
             font-weight: bold;
-            color: #ffd700;
+            color: #666;
             position: relative;
             z-index: 2;
         }
 
         .stat-label {
             font-size: 0.9em;
-            color: #bbb;
+            color: #888;
             margin-top: 10px;
             position: relative;
             z-index: 2;
@@ -166,13 +198,13 @@
         section {
             margin: 50px 0;
             padding: 30px;
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 8px;
-            border-left: 4px solid #fff;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-left: 4px solid #ffd700;
+            border: 2px solid #c0c0c0;
+            border-left: 4px solid #999;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         section::before {
@@ -182,7 +214,7 @@
             right: -100%;
             width: 100%;
             height: 2px;
-            background: linear-gradient(90deg, transparent, #ffd700, transparent);
+            background: linear-gradient(90deg, transparent, #c0c0c0, transparent);
             animation: slideIn 2s infinite;
         }
 
@@ -194,7 +226,7 @@
         section h2 {
             font-size: 2em;
             margin-bottom: 20px;
-            color: #ffd700;
+            color: #666;
             text-transform: uppercase;
             position: relative;
             z-index: 1;
@@ -203,7 +235,7 @@
         section p {
             font-size: 1.1em;
             line-height: 1.8;
-            color: #ddd;
+            color: #555;
             margin-bottom: 15px;
             position: relative;
             z-index: 1;
@@ -223,15 +255,17 @@
             position: relative;
             border-radius: 8px;
             overflow: hidden;
-            border: 2px solid #ffd700;
+            border: 2px solid #c0c0c0;
             transition: all 0.3s;
             cursor: pointer;
-            background: #000;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .gallery-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border-color: #999;
         }
 
         .gallery-item img {
@@ -251,7 +285,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
             padding: 20px;
             color: #fff;
             transform: translateY(100%);
@@ -263,14 +297,14 @@
         }
 
         .gallery-caption h3 {
-            color: #ffd700;
+            color: #e0e0e0;
             font-size: 1.1em;
             margin-bottom: 5px;
         }
 
         .gallery-caption p {
             font-size: 0.9em;
-            color: #ddd;
+            color: #ccc;
             margin: 0;
         }
 
@@ -286,101 +320,105 @@
         .social-links a {
             display: inline-block;
             padding: 12px 24px;
-            background: #fff;
-            color: #000;
+            background: #666;
+            color: #fff;
             text-decoration: none;
             border-radius: 5px;
             transition: all 0.3s;
             font-weight: bold;
             font-size: 0.95em;
-            border: 2px solid #fff;
+            border: 2px solid #666;
         }
 
         .social-links a:hover {
-            background: #ffd700;
-            color: #000;
+            background: #c0c0c0;
+            color: #333;
             transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .cta-button {
             display: inline-block;
             padding: 15px 40px;
-            background: #fff;
-            color: #000;
+            background: #666;
+            color: #fff;
             text-decoration: none;
             border-radius: 5px;
             margin-top: 20px;
             font-weight: bold;
             font-size: 1.1em;
             transition: all 0.3s;
-            border: 2px solid #fff;
+            border: 2px solid #666;
         }
 
         .cta-button:hover {
-            background: #ffd700;
+            background: #c0c0c0;
+            color: #333;
             transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .contact-box {
-            background: rgba(255, 215, 0, 0.05);
+            background: rgba(255, 255, 255, 0.9);
             padding: 30px;
             border-radius: 8px;
-            border: 2px solid #ffd700;
+            border: 2px solid #c0c0c0;
             margin: 30px 0;
             text-align: center;
             position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .contact-box h3 {
             font-size: 1.5em;
             margin-bottom: 15px;
-            color: #ffd700;
+            color: #666;
         }
 
         .contact-box p {
             font-size: 1.05em;
             margin-bottom: 20px;
-            color: #ddd;
+            color: #555;
         }
 
         .email-link {
             display: inline-block;
             padding: 12px 30px;
-            background: #ffd700;
-            color: #000;
+            background: #c0c0c0;
+            color: #333;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
             transition: all 0.3s;
-            border: 2px solid #ffd700;
+            border: 2px solid #c0c0c0;
         }
 
         .email-link:hover {
-            background: #fff;
-            color: #000;
-            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.5);
+            background: #999;
+            color: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         footer {
-            background: #000;
+            background: #f0f0f0;
             padding: 20px;
             text-align: center;
-            color: #aaa;
-            border-top: 2px solid #ffd700;
+            color: #666;
+            border-top: 2px solid #c0c0c0;
             margin-top: 40px;
+            position: relative;
+            z-index: 1;
         }
 
         .divider {
             height: 2px;
-            background: linear-gradient(to right, transparent, #ffd700, transparent);
+            background: linear-gradient(to right, transparent, #c0c0c0, transparent);
             margin: 30px 0;
         }
 
         ul {
             margin-left: 20px;
-            color: #ddd;
+            color: #555;
             position: relative;
             z-index: 1;
         }
@@ -447,10 +485,10 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://raw.githubusercontent.com/Isaiah94o/isaiah94o/main/IMG_1776-2.jpg" alt="Completed metal fabrication work">
+                    <img src="https://raw.githubusercontent.com/Isaiah94o/isaiah94o/main/PXZB3725%5B1%5D.JPG" alt="Stainless exhaust welds">
                     <div class="gallery-caption">
-                        <h3>Metal Fabrication - After</h3>
-                        <p>Custom piece completed</p>
+                        <h3>Stainless Exhaust Welds</h3>
+                        <p>Professional grade stainless fabrication</p>
                     </div>
                 </div>
                 <div class="gallery-item">
@@ -520,7 +558,7 @@
             <p>Interested in partnerships, sponsorships, or collaborations?</p>
             <p>Reach out directly:</p>
             <a href="mailto:isaiahsolis24@gmail.com" class="email-link">📧 isaiahsolis24@gmail.com</a>
-            <p style="margin-top: 20px; font-size: 0.9em; color: #aaa;">
+            <p style="margin-top: 20px; font-size: 0.9em; color: #999;">
                 Subject line suggestion: "Partnership Inquiry - Isaiah94o"
             </p>
         </div>
