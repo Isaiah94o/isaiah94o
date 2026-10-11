@@ -15,18 +15,18 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 50%, #d9d9d9 100%);
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1f1f1f 100%);
             background-image: 
-                radial-gradient(circle at 20% 50%, rgba(192, 192, 192, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(192, 192, 192, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 20%, rgba(192, 192, 192, 0.08) 0%, transparent 50%),
-                linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 50%, #d9d9d9 100%);
+                radial-gradient(circle at 20% 50%, rgba(100, 100, 100, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(100, 100, 100, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(100, 100, 100, 0.12) 0%, transparent 50%),
+                linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1f1f1f 100%);
             background-attachment: fixed;
             position: relative;
             overflow-x: hidden;
         }
 
-        /* Floral Pattern Overlay */
+        /* Dark Floral Pattern Overlay */
         body::before {
             content: '';
             position: fixed;
@@ -35,14 +35,14 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(circle at 10% 20%, rgba(200, 200, 200, 0.15) 0%, transparent 15%),
-                radial-gradient(circle at 15% 25%, rgba(200, 200, 200, 0.12) 0%, transparent 12%),
-                radial-gradient(circle at 85% 15%, rgba(200, 200, 200, 0.15) 0%, transparent 15%),
-                radial-gradient(circle at 90% 20%, rgba(200, 200, 200, 0.12) 0%, transparent 12%),
-                radial-gradient(circle at 50% 85%, rgba(200, 200, 200, 0.15) 0%, transparent 15%),
-                radial-gradient(circle at 55% 90%, rgba(200, 200, 200, 0.12) 0%, transparent 12%),
-                radial-gradient(circle at 25% 75%, rgba(200, 200, 200, 0.1) 0%, transparent 18%),
-                radial-gradient(circle at 70% 50%, rgba(200, 200, 200, 0.1) 0%, transparent 18%);
+                radial-gradient(circle at 10% 20%, rgba(150, 150, 150, 0.2) 0%, transparent 15%),
+                radial-gradient(circle at 15% 25%, rgba(150, 150, 150, 0.15) 0%, transparent 12%),
+                radial-gradient(circle at 85% 15%, rgba(150, 150, 150, 0.2) 0%, transparent 15%),
+                radial-gradient(circle at 90% 20%, rgba(150, 150, 150, 0.15) 0%, transparent 12%),
+                radial-gradient(circle at 50% 85%, rgba(150, 150, 150, 0.2) 0%, transparent 15%),
+                radial-gradient(circle at 55% 90%, rgba(150, 150, 150, 0.15) 0%, transparent 12%),
+                radial-gradient(circle at 25% 75%, rgba(150, 150, 150, 0.15) 0%, transparent 18%),
+                radial-gradient(circle at 70% 50%, rgba(150, 150, 150, 0.15) 0%, transparent 18%);
             background-size: 100% 100%;
             background-attachment: fixed;
             pointer-events: none;
@@ -78,13 +78,13 @@
         }
 
         header {
-            background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+            background: linear-gradient(135deg, #333333 0%, #2a2a2a 100%);
             padding: 60px 20px;
             text-align: center;
-            border-bottom: 3px solid #666;
+            border-bottom: 3px solid #c0c0c0;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         header::before {
@@ -108,15 +108,15 @@
             margin-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #333;
+            color: #e8e8e8;
             position: relative;
             z-index: 1;
-            text-shadow: 1px 1px 2px rgba(192, 192, 192, 0.3);
+            text-shadow: 2px 2px 4px rgba(192, 192, 192, 0.3);
         }
 
         header p {
             font-size: 1.3em;
-            color: #555;
+            color: #c0c0c0;
             margin-bottom: 20px;
             position: relative;
             z-index: 1;
@@ -124,14 +124,14 @@
 
         .tagline {
             font-size: 0.9em;
-            color: #777;
+            color: #999;
             font-style: italic;
             position: relative;
             z-index: 1;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
             position: relative;
@@ -146,7 +146,7 @@
         }
 
         .stat-card {
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.08);
             border: 2px solid #c0c0c0;
             padding: 20px;
             border-radius: 8px;
@@ -154,7 +154,7 @@
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         .stat-card::before {
@@ -170,9 +170,9 @@
 
         .stat-card:hover {
             transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-            border-color: #999;
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 15px rgba(192, 192, 192, 0.2);
+            border-color: #e8e8e8;
         }
 
         .stat-card:hover::before {
@@ -182,14 +182,14 @@
         .stat-number {
             font-size: 2.5em;
             font-weight: bold;
-            color: #666;
+            color: #c0c0c0;
             position: relative;
             z-index: 2;
         }
 
         .stat-label {
             font-size: 0.9em;
-            color: #888;
+            color: #999;
             margin-top: 10px;
             position: relative;
             z-index: 2;
@@ -198,13 +198,13 @@
         section {
             margin: 50px 0;
             padding: 30px;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.08);
             border-radius: 8px;
             border: 2px solid #c0c0c0;
             border-left: 4px solid #999;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         section::before {
@@ -226,7 +226,7 @@
         section h2 {
             font-size: 2em;
             margin-bottom: 20px;
-            color: #666;
+            color: #c0c0c0;
             text-transform: uppercase;
             position: relative;
             z-index: 1;
@@ -235,7 +235,7 @@
         section p {
             font-size: 1.1em;
             line-height: 1.8;
-            color: #555;
+            color: #ddd;
             margin-bottom: 15px;
             position: relative;
             z-index: 1;
@@ -244,7 +244,7 @@
         /* Gallery Styles */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             margin: 30px 0;
             position: relative;
@@ -258,14 +258,14 @@
             border: 2px solid #c0c0c0;
             transition: all 0.3s;
             cursor: pointer;
-            background: #fff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: #000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         .gallery-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            border-color: #999;
+            box-shadow: 0 10px 25px rgba(192, 192, 192, 0.3);
+            border-color: #e8e8e8;
         }
 
         .gallery-item img {
@@ -285,7 +285,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
             padding: 20px;
             color: #fff;
             transform: translateY(100%);
@@ -297,14 +297,14 @@
         }
 
         .gallery-caption h3 {
-            color: #e0e0e0;
+            color: #c0c0c0;
             font-size: 1.1em;
             margin-bottom: 5px;
         }
 
         .gallery-caption p {
             font-size: 0.9em;
-            color: #ccc;
+            color: #bbb;
             margin: 0;
         }
 
@@ -327,14 +327,14 @@
             transition: all 0.3s;
             font-weight: bold;
             font-size: 0.95em;
-            border: 2px solid #666;
+            border: 2px solid #c0c0c0;
         }
 
         .social-links a:hover {
             background: #c0c0c0;
             color: #333;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(192, 192, 192, 0.3);
         }
 
         .cta-button {
@@ -348,37 +348,37 @@
             font-weight: bold;
             font-size: 1.1em;
             transition: all 0.3s;
-            border: 2px solid #666;
+            border: 2px solid #c0c0c0;
         }
 
         .cta-button:hover {
             background: #c0c0c0;
             color: #333;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(192, 192, 192, 0.3);
         }
 
         .contact-box {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.1);
             padding: 30px;
             border-radius: 8px;
             border: 2px solid #c0c0c0;
             margin: 30px 0;
             text-align: center;
             position: relative;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         .contact-box h3 {
             font-size: 1.5em;
             margin-bottom: 15px;
-            color: #666;
+            color: #c0c0c0;
         }
 
         .contact-box p {
             font-size: 1.05em;
             margin-bottom: 20px;
-            color: #555;
+            color: #ddd;
         }
 
         .email-link {
@@ -396,14 +396,14 @@
         .email-link:hover {
             background: #999;
             color: #fff;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(192, 192, 192, 0.3);
         }
 
         footer {
-            background: #f0f0f0;
+            background: #1a1a1a;
             padding: 20px;
             text-align: center;
-            color: #666;
+            color: #999;
             border-top: 2px solid #c0c0c0;
             margin-top: 40px;
             position: relative;
@@ -418,7 +418,7 @@
 
         ul {
             margin-left: 20px;
-            color: #555;
+            color: #ddd;
             position: relative;
             z-index: 1;
         }
@@ -482,6 +482,13 @@
                     <div class="gallery-caption">
                         <h3>Metal Fabrication - Before</h3>
                         <p>Raw steel ready for fabrication</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/Isaiah94o/isaiah94o/main/IMG_1776-2.jpg" alt="Completed metal fabrication work">
+                    <div class="gallery-caption">
+                        <h3>Metal Fabrication - After</h3>
+                        <p>Custom piece completed</p>
                     </div>
                 </div>
                 <div class="gallery-item">
@@ -558,7 +565,7 @@
             <p>Interested in partnerships, sponsorships, or collaborations?</p>
             <p>Reach out directly:</p>
             <a href="mailto:isaiahsolis24@gmail.com" class="email-link">📧 isaiahsolis24@gmail.com</a>
-            <p style="margin-top: 20px; font-size: 0.9em; color: #999;">
+            <p style="margin-top: 20px; font-size: 0.9em; color: #777;">
                 Subject line suggestion: "Partnership Inquiry - Isaiah94o"
             </p>
         </div>
